@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:mm7="http://tempuri.org/mm7.xsd">
+ <SOAP-ENV:Header>
+ </SOAP-ENV:Header>
+ <SOAP-ENV:Body>
+  <mm7:DeliverRsp>
+   <MM7Version></MM7Version>
+   <ServiceCode></ServiceCode>
+   <Status>
+    <StatusCode></StatusCode>
+    <StatusText></StatusText>
+    <Detail></Detail>
+   </Status>
+  </mm7:DeliverRsp>
+ </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

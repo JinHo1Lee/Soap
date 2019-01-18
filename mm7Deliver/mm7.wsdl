@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="Service"
+ targetNamespace="http://tempuri.org/mm7.xsd/Service.wsdl"
+ xmlns:tns="http://tempuri.org/mm7.xsd/Service.wsdl"
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:mm7="http://tempuri.org/mm7.xsd"
+ xmlns:SOAP="http://schemas.xmlsoap.org/wsdl/soap/"
+ xmlns:MIME="http://schemas.xmlsoap.org/wsdl/mime/"
+ xmlns:DIME="http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/"
+ xmlns:WSDL="http://schemas.xmlsoap.org/wsdl/"
+ xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+<types>
+
+ <schema targetNamespace="http://tempuri.org/mm7.xsd"
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:mm7="http://tempuri.org/mm7.xsd"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="unqualified"
+  attributeFormDefault="unqualified">
+  <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+  <complexType name="StatusTree"><!-- StatusTree -->
+
+   <sequence>
+     <element name="StatusCode" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- StatusTree::StatusCode -->
+     <element name="StatusText" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- StatusTree::StatusText -->
+     <element name="Detail" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- StatusTree::Detail -->
+   </sequence>
+  </complexType>
+  <element name="TransactionID" type="xsd:string"/>
+  <!-- operation request element -->
+  <element name="DeliverReq">
+   <complexType>
+    <sequence>
+     <element name="MM7Version" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- mm7__DeliverReq::MM7Version -->
+     <element name="MMSRelayServerID" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- mm7__DeliverReq::MMSRelayServerID -->
+     <element name="Sender" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- mm7__DeliverReq::Sender -->
+     <element name="Recipients" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- mm7__DeliverReq::Recipients -->
+     <element name="TimeStamp" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- mm7__DeliverReq::TimeStamp -->
+     <element name="Subject" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- mm7__DeliverReq::Subject -->
+     <element name="Content" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- mm7__DeliverReq::Content -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="DeliverRsp">
+   <complexType>
+    <sequence>
+     <element name="MM7Version" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- mm7__DeliverRsp::MM7Version -->
+     <element name="ServiceCode" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- mm7__DeliverRsp::ServiceCode -->
+     <element name="Status" type="mm7:StatusTree" minOccurs="0" maxOccurs="1" nillable="true"/><!-- mm7__DeliverRsp::Status -->
+    </sequence>
+   </complexType>
+  </element>
+ </schema>
+
+</types>
+
+<message name="DeliverReq">
+ <part name="parameters" element="mm7:DeliverReq"/><!-- mm7__DeliverReq::mm7__DeliverReq -->
+</message>
+
+<message name="DeliverRsp">
+ <part name="parameters" element="mm7:DeliverRsp"/><!-- mm7__DeliverReq::DeliverRsp -->
+</message>
+
+<message name="ServiceHeader">
+ <part name="TransactionID" element="mm7:TransactionID"/>
+</message>
+
+<portType name="ServicePortType">
+ <operation name="DeliverReq">
+  <documentation>Service definition of function mm7__DeliverReq</documentation>
+  <input message="tns:DeliverReq"/>
+  <output message="tns:DeliverRsp"/>
+ </operation>
+</portType>
+
+<binding name="Service" type="tns:ServicePortType">
+ <SOAP:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+ <operation name="DeliverReq">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+</binding>
+
+<service name="Service">
+ <documentation>gSOAP 2.8.4 generated service definition</documentation>
+ <port name="Service" binding="tns:Service">
+  <SOAP:address location="http://localhost:80"/>
+ </port>
+</service>
+
+</definitions>

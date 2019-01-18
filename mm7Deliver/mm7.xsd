@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <schema targetNamespace="http://tempuri.org/mm7.xsd"
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:mm7="http://tempuri.org/mm7.xsd"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="unqualified"
+  attributeFormDefault="unqualified">
+  <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+  <element name="TransactionID" type="xsd:string"/>
+  <!-- operation request element -->
+  <element name="DeliverReq">
+   <complexType>
+    <sequence>
+     <element name="MM7Version" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- mm7__DeliverReq::MM7Version -->
+     <element name="MMSRelayServerID" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- mm7__DeliverReq::MMSRelayServerID -->
+     <element name="Sender" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- mm7__DeliverReq::Sender -->
+     <element name="Recipients" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- mm7__DeliverReq::Recipients -->
+     <element name="TimeStamp" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- mm7__DeliverReq::TimeStamp -->
+     <element name="Subject" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- mm7__DeliverReq::Subject -->
+     <element name="Content" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- mm7__DeliverReq::Content -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="DeliverRsp">
+   <complexType>
+    <sequence>
+     <element name="MM7Version" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- mm7__DeliverRsp::MM7Version -->
+     <element name="ServiceCode" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- mm7__DeliverRsp::ServiceCode -->
+     <element name="Status" type="mm7:StatusTree" minOccurs="0" maxOccurs="1" nillable="true"/><!-- mm7__DeliverRsp::Status -->
+    </sequence>
+   </complexType>
+  </element>
+ </schema>
+
