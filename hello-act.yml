@@ -2,7 +2,7 @@ server:
   port: 8090
 
 message:
-  act: "act-hello-wow"
+  act: "act-hello-real"
 
 spring:
   rabbitmq:
