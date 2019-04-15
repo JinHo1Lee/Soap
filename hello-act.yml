@@ -2,4 +2,4 @@ server:
   port: 8090
 
 message:
-  act: "act-hello"
+  act: "act-hello-real"
