@@ -2,7 +2,7 @@ server:
   port: 8090
 
 message:
-  act: "act"
+  act: "act-hello"
 
 spring:
   rabbitmq:
