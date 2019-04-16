@@ -2,11 +2,4 @@ server:
   port: 8090
 
 message:
-  act: "act-hello-wow"
-
-spring:
-  rabbitmq:
-    host: 172.16.0.107 
-    port: 5672
-    username: guest
-    password: guest
+  act: "act"
