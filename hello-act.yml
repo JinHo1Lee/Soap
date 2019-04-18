@@ -12,4 +12,4 @@ spring:
     password: guest
 
 env:
-    message: "hi"
+    message: "hi-act"
