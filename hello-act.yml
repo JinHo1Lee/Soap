@@ -12,8 +12,7 @@ spring:
     password: guest
 
 
-servers:
-    name: "hi"
-    - id: "skt"
-    - id: "ktf"
-    - id: "lgt"
+env:
+    server:
+        - "hi"
+        - "melong"
