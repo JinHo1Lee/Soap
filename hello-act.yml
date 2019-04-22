@@ -13,7 +13,8 @@ spring:
 
 
 env:
-    id: "hello"
     smts:
         - name: skt
           port: 11001
+        - name: ktf
+          port: 21001
