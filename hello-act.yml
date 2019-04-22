@@ -11,8 +11,6 @@ spring:
     username: guest
     password: guest
 
-skt:
-    sms:
-        ip: "172.16.2.55"
-        port: 11001
-        recvque: "smt_sk1.que"
+skt.name: "hi"
+skt.sms.port: 11001
+skt.sms.recvque: "smt_sk1.que"
