@@ -1,9 +1,6 @@
 server:
   port: 8090
 
-message:
-  act: "act-hello"
-
 spring:
   rabbitmq:
     host: 172.16.0.107
@@ -23,7 +20,15 @@ tsinfo:
         - tsid: ktf
           port: 21001
           valid: Y
-    dbinfo:
+dbinfo:
+    smts:
         ip: 172.16.0.107
         port: 3306
         dbname: smts
+    mmts:
+        ip: 172.16.0.107
+        port: 3306
+        dbname: mmts
+env:
+    logdir: ./log
+    quedir: ./que
