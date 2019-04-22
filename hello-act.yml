@@ -13,7 +13,7 @@ spring:
 
 
 servers:
-    name : "hi"
+    name: "hi"
     - id: "skt"
     - id: "ktf"
     - id: "lgt"
