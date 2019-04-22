@@ -13,6 +13,6 @@ spring:
 
 
 tsmt:
-    - name: skt
-    - name: ktf
-    - name: lgt
+    - "skt"
+    - "ktf"
+    - "lgt"
