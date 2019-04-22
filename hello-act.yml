@@ -12,7 +12,7 @@ spring:
     password: guest
 
 skt:
-  name: "hi"
+    name: "hi"
     sms:
-      port: 11001
-      recvque: "smt_sk1.que"
+        port: 11001
+        recvque: "smt_sk1.que"
