@@ -15,5 +15,5 @@ spring:
 env:
     id: "hello"
     smts:
-        name: skt
-        port: 11001
+        - name: skt
+          port: 11001
