@@ -13,13 +13,6 @@ spring:
 
 
 tsmt:
-    server:
-        - name: skt
-          ip: 172.16.2.55
-          port: 11001
-        - name: ktf
-          ip: 172.16.2.55
-          port: 21001
-        - name: lgt
-          ip: 172.16.2.55
-          port: 31001
+    - name: skt
+    - name: ktf
+    - name: lgt
