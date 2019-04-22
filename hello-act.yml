@@ -15,11 +15,11 @@ spring:
 tsmt:
     server:
         - name: skt
+          ip: 172.16.2.55
           port: 11001
-          recvque: "smt_sk1.que"
         - name: ktf
+          ip: 172.16.2.55
           port: 21001
-          recvque: "smt_kt1.que"
         - name: lgt
+          ip: 172.16.2.55
           port: 31001
-          recvque: "smt_lgt1.que"
