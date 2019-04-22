@@ -14,12 +14,12 @@ spring:
 
 tsmt:
     server:
-        - name: "skt"
+        - name: skt
           port: 11001
           recvque: "smt_sk1.que"
-        - name: "ktf"
+        - name: ktf
           port: 21001
           recvque: "smt_kt1.que"
-        - name: "lgt"
+        - name: lgt
           port: 31001
           recvque: "smt_lgt1.que"
