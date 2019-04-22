@@ -11,10 +11,19 @@ spring:
     username: guest
     password: guest
 
+authinfo:
+    host: 172.16.0.107
+    port: 14001
 
-env:
+tsinfo:
     smts:
-        - name: skt
+        - tsid: skt
           port: 11001
-        - name: ktf
+          valid: Y
+        - tsid: ktf
           port: 21001
+          valid: Y
+    dbinfo:
+        ip: 172.16.0.107
+        port: 3306
+        dbname: smts
