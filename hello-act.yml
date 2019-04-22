@@ -12,7 +12,8 @@ spring:
     password: guest
 
 
-tsmt:
-    - "skt"
-    - "ktf"
-    - "lgt"
+servers:
+    name : "hi"
+    - id: "skt"
+    - id: "ktf"
+    - id: "lgt"
