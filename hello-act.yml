@@ -15,11 +15,11 @@ spring:
 env:
     smts:
         - name: skt
-            port: 11001
+          port: 11001
         - name: kft
-            port: 21001
+          port: 21001
     mmts:
         - name: skt
-            port: 13001
+          port: 13001
         - name: ktf
-            port: 23001
+          port: 23001
