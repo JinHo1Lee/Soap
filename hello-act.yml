@@ -11,5 +11,8 @@ spring:
     username: guest
     password: guest
 
-env:
-    message: "hi-act"
+skt:
+    sms:
+        ip: "172.16.2.55"
+        port: 11001
+        recvque: "smt_sk1.que"
