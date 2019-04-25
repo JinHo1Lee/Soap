@@ -14,21 +14,19 @@ authinfo:
 
 tsinfo:
     smts:
-        - tsid: skt
+        - tsid: smt_skt
           port: 11001
           valid: Y
-        - tsid: ktf
+        - tsid: smt_ktf
           port: 21001
           valid: Y
+        - tsid: smt_lgt
+          port: 31001
+          valid: Y
+
 dbinfo:
-    smts:
-        ip: 172.16.0.107
-        port: 3306
-        dbname: smts
-    mmts:
-        ip: 172.16.0.107
-        port: 3306
-        dbname: mmts
+    ip: 172.16.0.107
+    port: 3306
+    dbname: smts
+
 env:
-    logdir: ./log
-    quedir: ./que
