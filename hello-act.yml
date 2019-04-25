@@ -13,16 +13,18 @@ authinfo:
     port: 14001
 
 tsinfo:
-    smts:
-        - tsid: smt_skt
-          port: 11001
-          valid: Y
-        - tsid: smt_ktf
-          port: 21001
-          valid: Y
-        - tsid: smt_lgt
-          port: 31001
-          valid: Y
+    smt_skt:
+        ip: 172.16.2.55
+        port: 11001
+        valid: Y
+    smt_ktf:
+        ip: 172.16.2.55
+        port: 21001
+        valid: Y
+    smt_lgt:
+        ip: 172.16.2.55
+        port: 31001
+        valid: Y
 
 dbinfo:
     ip: 172.16.0.107
